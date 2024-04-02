@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>ArcGIS WebMap Integration</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.24/"></script>
+
+    <script>
+        require([
+            "esri/config",
+            "esri/WebMap",
+            "esri/views/MapView"
+        ], function(esriConfig, WebMap, MapView) {
+
+            esriConfig.apiKey = "AAPK382872390ca142c3b6f532cd869688da7ojA9uR1pPe_VZ7jiEeQvLF2ihiWPiIwSEtKutG47spprC2JnRztY8-Ju2MAN1Zz";
+
+            const webMap = new WebMap({
+                portalItem: {
+                    // Provide the id of your webmap here
+                    id: "63aff80ee5a646e8b2777af5ac1a9426"
+                }
+            });
+
+            const view = new MapView({
+                container: "viewDiv",
+                map: webMap
+            });
+        });
+    </script>
+
+    <style>
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewDiv"></div>
+</body>
+</html>
