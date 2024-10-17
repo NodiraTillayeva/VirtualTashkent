@@ -1,0 +1,13 @@
+/* Styling for full-page map view */
+html, body, #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Popup container for quests */
+.esri-popup__main-container {
+    max-height: 200px;
+    overflow-y: auto;
+}

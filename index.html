@@ -1,46 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>ArcGIS WebMap Integration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtualTashkent - Custom Basemap</title>
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.24/"></script>
-
-    <script>
-        require([
-            "esri/config",
-            "esri/WebMap",
-            "esri/views/MapView"
-        ], function(esriConfig, WebMap, MapView) {
-
-            esriConfig.apiKey = "AAPK382872390ca142c3b6f532cd869688da7ojA9uR1pPe_VZ7jiEeQvLF2ihiWPiIwSEtKutG47spprC2JnRztY8-Ju2MAN1Zz";
-
-            const webMap = new WebMap({
-                portalItem: {
-                    // Provide the id of your webmap here
-                    id: "63aff80ee5a646e8b2777af5ac1a9426"
-                }
-            });
-
-            const view = new MapView({
-                container: "viewDiv",
-                map: webMap
-            });
-        });
-    </script>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
     <style>
-        html, body, #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
+        /* Full-page map */
+        #map {
+            height: 100vh;
             width: 100%;
         }
     </style>
 </head>
 <body>
-    <div id="viewDiv"></div>
+    <div id="map"></div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Link to your custom JavaScript file -->
+    <script src="app.js"></script>
 </body>
 </html>
