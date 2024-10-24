@@ -1,5 +1,8 @@
 # VirtualTashkent 🌍
 
+![image](https://github.com/user-attachments/assets/62d07223-9bc9-40b7-b026-7575fec36da2)
+
+
 VirtualTashkent is a virtual environment simulating the beautiful and historical city of Tashkent. The project offers an interactive experience through quests and maps, making it both educational and entertaining. This is an ongoing pet project aimed at developing a virtual space for users to explore Tashkent's landmarks, learn about its history, and engage in quests that challenge their knowledge and problem-solving skills.
 
 ## Features
